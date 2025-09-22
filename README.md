@@ -3,7 +3,6 @@
 This repo assumes that the consumer is using a local k3s cluster with Traefik ingress controller repository. This repo will hold a set of assets and installation instructions to achieve the following:
 
 - Install ArgoCD
-- Expose the ArgoCD API and UI via Traefik
 - Use ArgoCD to deploy and manage Grafana Alloy
 - Provide configuration for Grafana Alloy to send telemetry data about the cluster and any applications deployed to Grafana Cloud
 
