@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+spec:
+  sources:
+    - repoURL: "https://open-telemetry.github.io/opentelemetry-helm-charts"
+      chart: opentelemetry-collector
+      targetRevision: latest
+      helm:
+        valueFiles:
+          - $values/charts/prometheus/values.yaml
+    - repoURL: "https://https://github.com/holdeneoneal/o11y.git"
+      targetRevision: dev
+      ref: values
