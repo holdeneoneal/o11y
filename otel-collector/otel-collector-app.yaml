@@ -7,7 +7,7 @@ spec:
       targetRevision: latest
       helm:
         valueFiles:
-          - $values/charts/prometheus/values.yaml
-    - repoURL: "https://https://github.com/holdeneoneal/o11y.git"
-      targetRevision: dev
+          - $values/otel-collector/values.yaml
+    - repoURL: "https://github.com/holdeneoneal/o11y.git"
+      targetRevision: otel
       ref: values

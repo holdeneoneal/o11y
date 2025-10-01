@@ -1,0 +1,14 @@
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+spec:
+  sources:
+    - repoURL: "https://github.com/grafana/helm-charts"
+      chart: lgtm-distributed
+      targetRevision: main
+      helm:
+        valueFiles:
+          - $values/lgtm/values.yaml
+    - repoURL: "https://github.com/holdeneoneal/o11y.git"
+      targetRevision: otel
+      ref: values
